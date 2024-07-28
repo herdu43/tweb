@@ -1,0 +1,115 @@
+.color-picker-v2 {
+  .color-button {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: 2px;
+  }
+
+  .quick-pallete {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    height: 48px;
+
+    .btn-icon {
+      &.selected, &:hover {
+        background-color: var(--color-value);
+      }
+    }
+  }
+
+  .pallete-switch-button {
+    background: conic-gradient(red, yellow, lime, aqua, blue, magenta, red);
+  }
+
+  &-pallete-box {
+    width: 200px;
+    height: 120px;
+  }
+
+  .color-slider-container {
+    display: flex;
+    justify-content: space-between;
+    height: 48px;
+    align-items: center;
+  }
+
+  .color-slider {
+    width: 300px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding-left: 8px;
+    overflow: visible;
+  }
+
+  .box-pallete-container {
+    display: flex;
+    margin-top: 16px;
+    padding: 0 8px;
+  }
+
+  .color-input {
+    margin: 0 0 12px 24px;
+  }
+
+  .color-slider-dragger, .color-picker-v2-dragger {
+    overflow: visible !important;
+  }
+}
+
+.color-picker-v2.mobile {
+  position: relative;
+
+  .quick-pallete {
+    padding: 0 8px;
+    background: var(--surface-color);
+    position: absolute;
+    top: -71px;
+    left: var(--color-picker-v2-mobile-left);
+    z-index: 1;
+    height: 56px;
+    justify-content: center;
+    flex-wrap: nowrap;
+    width: var(--color-picker-v2-mobile-width);
+    border-bottom: 1px solid var(--secondary-color);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  .advance-pallete {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 8px;
+    background: var(--surface-color);
+    position: absolute;
+    top: -215px;
+    left: var(--color-picker-v2-mobile-left);
+    z-index: 1;
+    height: 200px;
+    width: var(--color-picker-v2-mobile-width);
+    border-bottom: 1px solid var(--secondary-color);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+    .color-slider-container {
+      margin-left: 8px;
+      justify-content: flex-start;
+    }
+
+    .color-sliders {
+      margin-right: 8px;
+    }
+
+    .color-input {
+      margin: 0 0 12px 8px;
+
+      input {
+        width: 140px;
+      }
+    }
+  }
+}
